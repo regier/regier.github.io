@@ -1,14 +1,11 @@
 @font-face {
 	font-family: Comfortaa;
-	font-style: normal;
-	font-weight: 400;
-	src: local('Comfortaa');
 	src: url('../regier.github.io/Comfortaa.ttf');
 }
 
 * {
 	box-sizing: border-box;
- 	font-family: Comfortaa, Cantarell, cursive, sans-serif;
+ 	font-family: Comfortaa, Cantarell, sans-serif;
 	text-shadow: 2px 2px 5px #B8860B /* DarkGoldenRod */;
 	color: #EEE8AA /* PaleGoldenRod */;
 	background-color: Black;
