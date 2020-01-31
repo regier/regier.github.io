@@ -1,3 +1,11 @@
+@font-face {
+	font-family: Comfortaa;
+	font-style: normal;
+	font-weight: 400;
+	src: local('Comfortaa');
+	src: url('../roghaos.github.io/Comfortaa.ttf');
+}
+
 * {
 	box-sizing: border-box;
  	font-family: Comfortaa, Cantarell, cursive, sans-serif;
@@ -10,7 +18,13 @@
 
 header		{min-width: 100px; max-width: 1024px;}
 body			{min-width: 100px; max-width: 1024px;}
-.menus		{display: inline-block; font-weight: light;}
+.menus		{
+	display: inline-block;
+	font-weight: light;
+	border-style: solid;
+	border-width: 1px;
+	padding: 4px;
+}
 
 header		{border-style: ridge; border-color: silver;}
 #content		{border-style: ridge; border-color: silver; padding: 2%;}
