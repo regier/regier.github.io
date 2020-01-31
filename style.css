@@ -21,6 +21,8 @@ body			{min-width: 100px; max-width: 1024px;}
 	border-style: solid;
 	border-width: 1px;
 	padding: 4px;
+	min-width: 128px;
+	text-align: center;
 }
 
 header		{border-style: ridge; border-color: silver;}
