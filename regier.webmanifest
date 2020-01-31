@@ -1,0 +1,21 @@
+{
+    "name": "Regier WPA",
+    "short_name": "Regier",
+    "description": "Regier Progressive Web App",
+    "icons": [
+        {
+            "src": "regier_512px.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "regier_256px.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+    ],
+    "start_url": "/index.html",
+    "display": "fullscreen",
+    "theme_color": "#EEE8AA",
+    "background_color": "#000000"
+}
