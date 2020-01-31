@@ -1,8 +1,7 @@
-| Regier Kunkel | Dublin Ireland |
-| --------------|---------------|
-| Information Technology / SysAdmin / QA | https://github.com/regier |
-| regier.kunkel@gmail.com | https://ie.linkedin.com/in/regierkunkel |
----
+Regier Kunkel
+Dublin, Ireland
+https://github.com/regier
+https://ie.linkedin.com/in/regierkunkel
 ## Profile
 * Second year student of Bachelor of Science in Information Technology.
 * GNU/Linux and Windows Server Administrator. Passionate about
