@@ -24,6 +24,7 @@ body			{min-width: 100px; max-width: 1024px;}
 	padding: 4px;
 	min-width: 128px;
 	text-align: center;
+    line-height: 48px;
 }
 
 header		{border-style: ridge; border-color: silver;}
