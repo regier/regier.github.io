@@ -27,18 +27,18 @@ body			{min-width: 100px; max-width: 1024px;}
     line-height: 48px;
 }
 
-header		{border-style: ridge; border-color: silver;}
+header          {border-style: ridge; border-color: silver;}
 #content		{border-style: ridge; border-color: silver; padding: 2%;}
 
-.title		{border-style: ridge; border-color: red;}
-#Profile 	{border-style: ridge; border-color: green;}
-#Skills		{border-style: ridge; border-color: blue;}
-#Languages	{border-style: ridge; border-color: cyan;}
-#Memberships{border-style: ridge; border-color: magenta;}
-#Hobbies		{border-style: ridge; border-color: yellow;}
+.title		    {border-style: ridge; border-color: red;}
+#Profile        {border-style: ridge; border-color: green;}
+#Skills         {border-style: ridge; border-color: blue;}
+#Languages      {border-style: ridge; border-color: cyan;}
+#Memberships    {border-style: ridge; border-color: magenta;}
+#Hobbies        {border-style: ridge; border-color: yellow;}
 
 a				{text-decoration: none; color: Yellow}
-a:focus,a:hover {color: cyan; text-shadow: 2px 2px 2px cyan; background-color: black; border-color: cyan}
-a:active		{color: green;}
+a:focus,a:hover {color: magenta; text-shadow: 2px 2px 2px cyan;}
+a:active		{color: red;}
 
-pre,code    {font-family: monospace; font-size:larger; background-color: #121212;}
+pre,code        {font-family: monospace; font-size:larger; background-color: #121212;}
