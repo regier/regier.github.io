@@ -2,7 +2,16 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preload" href="styles/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="styles/styles.css"></noscript>
+    <style type="text/css">
+        @font-face {font-family: Comfortaa;/*
+	   src: url('../regier.github.io/assets/fonts/Comfortaa.ttf');*/
+	   src: url('/assets/fonts/Comfortaa.ttf');}
+	   font-family: Comfortaa, Cantarell, sans-serif;
+        header		{min-width: 100px; max-width: 1024px;}
+        body		{min-width: 100px; max-width: 1024px;}
+    </style>
     <link rel="manifest" href="manifest.json">
     <link rel="apple-touch-icon" href="assets/images/regier_192px.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
