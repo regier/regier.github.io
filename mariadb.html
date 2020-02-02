@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="assets/images/regier_192px.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self'; img-src 'self'; style-src 'self';">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Regier's Blog. Just another techy guy.">
+    <meta name="keywords" content="blog,linux,technology,wideopendoor,regierkunkel,tutorials,articles,technews">
+    <meta name="tags" content="blog,linux,technology,wideopendoor,regierkunkel,tutorials,articles,technews">
+    <meta name="author" content="Regier Kunkel" >
+    <title>[MariaDB]Regier Kunkel</title>
+</head>
+
+<body>
+
+<header>
+    <h4><a href="blog.html">Blog</a> <b>|</b> <a href="index.html">Main Site</a></h4>
+</header>
+<div id="content">
+<div id="blog">
+<article>
+<h1 class="title">Creating a DATABASE and USER for MariaDB</h1>
+<p>This is a quick and simple tutorial on how to create a database in MariaDB and as well creating and adding a user to use that DB.<br>
+Moreover we are going to see how to allow said user to connect from any server in the local network.<br>
+All text <code>like this</code> are the commands we are going to use.<br>
+Things <pre>written like this</pre> is what you should expect from your command or see in the terminal.</p>
+<p>I am assuming you have a fresh MariaDB install. For example what you get after running <strong>apt install mariadb-server</strong> on Debian based systems.</p>
+<h3>Creating a database in MariaDB</h3>
+<p>First run <strong>mysql</strong> as root from the server terminal to interact with MariaDB.<br>
+You should now see something like this.<br>
+<pre>
+root@Think-T420:~# mysql
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 49
+Server version: 10.3.18-MariaDB-0+deb10u1 Debian 10
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]>
+</pre>
+We are no going to create a database called <strong>this_database</strong> with the command <code>CREATE DATABASE `this_database`;</code><br>
+Please notice the quote style <strong>" ` "</strong> and the <strong>" ; "</strong> at the end.<br>
+You should see something like this.<br>
+<pre>
+MariaDB [(none)]> CREATE DATABASE `this_database`;
+Query OK, 1 row affected (0.001 sec)
+</pre></p>
+<h4>Creating a User in MariaDB</h4>
+<p>Ok, you have a database, now <strong>let's create a user</strong> so you or your application can actually make use of it<br>
+We are going to create a user called <strong>my_self</strong> and it's password is going to be <strong>my_password</strong>, of course you can change the password, user name and database name to anything you like.<br>
+The MySQL command for this is <code>CREATE USER 'my_user' IDENTIFIED BY 'my_password';</code>.<br>
+You should see an output like this.
+<pre>
+MariaDB [(none)]> CREATE USER 'my user' IDENTIFIED BY 'my_password';
+Query OK, 0 rows affected (0.001 sec)
+</pre></p>
+<h4>Granting Privileges to User in a Database in MariaDB</h4>
+<p>Fantastic! Now we have a database called <strong>this_database</strong> and a user named <strong>my_user</strong> authenticated with the password <strong>my_password</strong>.<br>
+<strong>However!</strong> Just because both exist <strong>it doesn't mean the user can use the database!</strong><br>
+Now we are going to <strong>allow my_user to access the database this_database from localhost</strong>, that is, the same server, the same place MariaDB is running from.
+Let's use the command <code>GRANT USAGE ON *.* TO 'my_user'@localhost IDENTIFIED BY 'my_password';</code>
+The output should be something like this.
+<pre>
+MariaDB [(none)]> GRANT USAGE ON *.* TO 'my_user'@localhost IDENTIFIED BY 'my_password';
+Query OK, 0 rows affected (0.000 sec)
+</pre>
+Now, if you want to <strong>allow user to connect from any other server on the network</strong>, just <strong>replace localhost with '%'</strong>.<br>
+The command and output will be. <code>GRANT USAGE ON *.* TO 'my_user'@'%' IDENTIFIED BY 'my_password';</code>
+<pre>
+MariaDB [(none)]> GRANT USAGE ON *.* TO 'my_user'@'%' IDENTIFIED BY 'my_password';
+Query OK, 0 rows affected (0.001 sec)
+</pre>
+And finally lets give all privileges to my_user so it can modify this_database. As before <strong>" '@' " for network access</strong> and <strong>" localhost " for server access</strong>.<br>
+<code>GRANT ALL privileges ON `my_database`.* TO 'my_user'@'%' IDENTIFIED BY 'my_password';</code><br>
+<pre>
+GRANT ALL privileges ON `my_database`.* TO 'my_user'@'%' IDENTIFIED BY 'my_password';
+Query OK, 0 rows affected (0.001 sec)
+</pre><br>
+Lets finish up with a <code>FLUSH PRIVILEGES;</code>.<br>
+You can see if this worked by doing like in the output bellow.<br>
+<code>SHOW GRANTS FOR 'my_user'@localhost;</code>
+<pre>
+SHOW GRANTS FOR 'my_user'@localhost;
++--------------------------------------------------------------------+
+| Grants for my_user@localhost                                       |
++--------------------------------------------------------------------+
+| GRANT USAGE ON *.* TO 'my_user'@'localhost'                        |
+| GRANT ALL PRIVILEGES ON `this_database`.* TO 'my_user'@'localhost' |
++--------------------------------------------------------------------+
+2 rows in set (0,00 sec)
+</pre>
+</p>
+</article>
+</div>
+</div>
+</body>
+</html>

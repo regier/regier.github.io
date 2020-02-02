@@ -38,6 +38,7 @@ header		{border-style: ridge; border-color: silver;}
 #Hobbies		{border-style: ridge; border-color: yellow;}
 
 a				{text-decoration: none; color: Yellow}
-a:focus		{color: violet; text-shadow: 2px 2px 5px cyan;}
-a:hover		{color: violet; text-shadow: 2px 2px 5px cyan;}
+a:focus,a:hover {color: cyan; text-shadow: 2px 2px 2px cyan; background-color: black; border-color: cyan}
 a:active		{color: green;}
+
+pre,code    {font-family: monospace; font-size:larger; background-color: #121212;}
