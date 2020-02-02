@@ -6,7 +6,7 @@
 
 * {
 	box-sizing: border-box;
- 	font-family: Comfortaa;
+ 	font-family: Comfortaa, Cantarell, sans-serif;
 	text-shadow: 2px 2px 5px #B8860B /* DarkGoldenRod */;
 	color: #EEE8AA /* PaleGoldenRod */;
 	background-color: Black;
@@ -14,8 +14,8 @@
 	margin-right: auto;
 }
 
-/*header		{min-width: 100px; max-width: 1024px;}*/
-/*body			{min-width: 100px; max-width: 1024px;}*/
+header		{min-width: 100px; max-width: 1024px;}
+body			{min-width: 100px; max-width: 1024px;}
 .menus		{
 	display: inline-block;
 	font-weight: light;
