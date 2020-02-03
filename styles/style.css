@@ -1,44 +1,30 @@
 @font-face {
-	font-family: Comfortaa;/*
-	src: url('../regier.github.io/assets/fonts/Comfortaa.ttf');*/
-	src: url('/assets/fonts/Comfortaa.ttf');
+	font-family: Comfortaa;
+	src: url('../regier.github.io/assets/fonts/Comfortaa.ttf');
+	src: url('assets/fonts/Comfortaa.ttf');
 }
 
 * {
 	box-sizing: border-box;
- 	font-family: Comfortaa, Cantarell, sans-serif;
-	text-shadow: 2px 2px 5px #B8860B /* DarkGoldenRod */;
-	color: #EEE8AA /* PaleGoldenRod */;
-	background-color: Black;
-	margin-left: auto;
-	margin-right: auto;
+ 	font-family: Comfortaa; sans-serif;
+	color: wheat;
+	background-color: black;
+	margin-left: auto; margin-right: auto;
 }
 
-header		{min-width: 100px; max-width: 1024px;}
-body			{min-width: 100px; max-width: 1024px;}
-.menus		{
-	display: inline-block;
-	font-weight: light;
-	border-style: solid;
-	border-width: 1px;
-	padding: 4px;
-	min-width: 128px;
-	text-align: center;
-    line-height: 48px;
-}
-
-header          {border-style: ridge; border-color: silver;}
+nav,header,body    {min-width: 100px; max-width: 1024px;}
+.menus          {display: inline-table;}
+.amenu {
+    text-decoration: none; color: yellow; border-style: solid; border-width: 1px; border-color: cyan;
+    line-height: 64px; padding: 10px; padding-top: 15px; padding-bottom:15px; margin: auto;}
+h1,h2,h3,h4 {color: yellow;}
 #content		{border-style: ridge; border-color: silver; padding: 2%;}
-
-.title		    {border-style: ridge; border-color: red;}
-#Profile        {border-style: ridge; border-color: green;}
-#Skills         {border-style: ridge; border-color: blue;}
-#Languages      {border-style: ridge; border-color: cyan;}
-#Memberships    {border-style: ridge; border-color: magenta;}
-#Hobbies        {border-style: ridge; border-color: yellow;}
-
-a				{text-decoration: none; color: Yellow}
-a:focus,a:hover {color: magenta; text-shadow: 2px 2px 2px cyan;}
-a:active		{color: red;}
-
+.title,.red_border,.green_border,.blue_border,.cyan_border,.magenta_border,.yellow_border {border-style: ridge;}
+.title {border-color: red;}
+.red_border {border-color: red;}
+.green_border {border-color: green;}
+.blue_border {border-color: blue;}
+.cyan_border {border-color: cyan;}
+.magenta_border {border-color: magenta;}
+.yellow_border {border-color: yellow;}
 pre,code        {font-family: monospace; font-size:larger; background-color: #121212;}
