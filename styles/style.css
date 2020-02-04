@@ -12,7 +12,7 @@
 
 body {
 	font-family: Comfortaa;
-	color: green;
+	color: white;
 	background-color: black;
     max-width: 1024px;
     min-width: 128px;
@@ -22,7 +22,7 @@ body {
 nav{padding-top: 5px; padding-left: 5px; display: block;}
 
 .amenu {
-    color: blue;
+    color: white;
     display: inline-table;
     padding-top: 15px; padding-bottom: 15px;
     padding-left: 3px; padding-right: 3px;
@@ -31,6 +31,7 @@ nav{padding-top: 5px; padding-left: 5px; display: block;}
 }
 .amenu:hover,.amenu:focus{color: cyan;}
 .amenu:active {color: white; border-color: white;}
+a {color: cyan;}
 
 header {border: 2px solid cyan;}
 article {border: 2px solid magenta;}
