@@ -30,7 +30,7 @@ nav{padding-top: 5px; padding-left: 5px; display: block;}
     border: 1px solid red;
 }
 .amenu:hover,.amenu:focus{color: cyan;}
-.amenu:active {color: white; border-color: white;}
+.amenu:active {color: cyan; border-color: cyan;}
 a {color: cyan;}
 
 header {border: 2px solid cyan;}
