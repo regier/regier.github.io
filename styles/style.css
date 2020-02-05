@@ -6,13 +6,18 @@
 }
 
 * {font-family: Comfortaa; box-sizing: border-box;}
+@media all and (display-mode: standalone),(prefers-color-scheme: light) {
+.amenu {color:black; border-color: red;}
+.amenu:hover,.amenu:focus{color: cyan;}
+.amenu:active {color: cyan; border-color: cyan;}
+body {color: black; background-color: white;}
+a {color: green;}
 
-nav{padding: 5px;}
-.amenu {border: solid; display: inline-grid; padding: 15px; padding-left: 2px; padding-right: 2px; text-decoration: none;}
-article,header,section {margin:1%;}
-p,h1,h2,h3,h4 {margin-left: 1%;}
-body {max-width: 1024px; min-width: 128px; margin: auto; vertical-align:middle;}
-article,header,section {margin: 1%; border: solid;}
+header {border-color: blue;}
+article {border-color: red;}
+section {border-color: green;}
+p:hover,li:hover,h1:hover,h2:hover {color:red;}
+}
 
 @media all and (display-mode: standalone),(prefers-color-scheme: dark), (prefers-color-scheme: no-preference) {
 .amenu {color:white; border-color: red;}
@@ -25,19 +30,6 @@ header {border-color: cyan;}
 article {border-color: magenta;}
 section {border-color: yellow;}
 p:hover,li:hover,h1:hover,h2:hover {color:yellow;}
-}
-
-@media all and (display-mode: standalone),(prefers-color-scheme: light) {
-.amenu {color:black; border-color: red;}
-.amenu:hover,.amenu:focus{color: cyan;}
-.amenu:active {color: cyan; border-color: cyan;}
-body {color: black; background-color: white;}
-a {color: green;}
-
-header {border-color: blue;}
-article {border-color: red;}
-section {border-color: green;}
-p:hover,li:hover,h1:hover,h2:hover {color:red;}
 }
 
 @media print, tv {
