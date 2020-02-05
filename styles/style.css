@@ -1,11 +1,3 @@
-@font-face {
-  font-family: 'Comfortaa';
-  font-style: normal;
-  font-weight: 400;
-  src: url(../assets/fonts/Comfortaa.ttf) format('truetype');
-}
-
-* {font-family: Comfortaa; box-sizing: border-box;}
 @media all and (display-mode: standalone),(prefers-color-scheme: light) {
 .amenu {color:black; border-color: red;}
 .amenu:hover,.amenu:focus{color: cyan;}
