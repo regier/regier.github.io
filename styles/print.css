@@ -2,19 +2,20 @@
   font-family: 'Comfortaa';
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
   src: url(../assets/fonts/Comfortaa.ttf) format('truetype');
 }
 
 * {
     box-sizing: border-box;
-    border-style: none;
+    background: none;
     color: black;
-    background: white;    
+    border-style: none;
 }
 
 body {
 	font-family: Comfortaa;
+	color: black;
+	background-color: none;
     max-width: 1024px;
     min-width: 128px;
     margin: auto;
@@ -23,18 +24,17 @@ body {
 nav{padding-top: 5px; padding-left: 5px; display: block;}
 
 .amenu {
-    background-color: white;
     text-decoration: none;
+    color: black;
     display: inline-table;
     padding-top: 15px; padding-bottom: 15px;
     padding-left: 3px; padding-right: 3px;
     margin-right: 2px; margin-bottom: 5px;
+    border-style: none;
 }
-
-a {color: blue;}
+.amenu:hover,.amenu:focus{color: blue;}
+.amenu:active {color: blue;}
+a {color: red;}
 h1,h2,h3,h4 {padding-left: 10px;}
 
-header,article,section,nav,.amenu {border-style: none;}
-header {padding: 1%;}
-article {padding: 1%;}
-section {padding: 1%;}
+header,article,section {padding: 1%; border-style: none;}

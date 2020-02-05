@@ -2,38 +2,53 @@
   font-family: 'Comfortaa';
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
   src: url(../assets/fonts/Comfortaa.ttf) format('truetype');
 }
 
-* {box-sizing: border-box;}
+* {font-family: Comfortaa; box-sizing: border-box;}
 
-body {
-	font-family: Comfortaa;
-	color: white;
-	background-color: black;
-    max-width: 1024px;
-    min-width: 128px;
-    margin: auto;
-}
+nav{padding: 5px;}
+.amenu {border: solid; display: inline-grid; padding: 15px; padding-left: 2px; padding-right: 2px; text-decoration: none;}
+article,header,section {margin:1%;}
+p,h1,h2,h3,h4 {margin-left: 1%;}
+body {max-width: 1024px; min-width: 128px; margin: auto; vertical-align:middle;}
+article,header,section {margin: 1%; border: solid;}
 
-nav{padding-top: 5px; padding-left: 5px; display: block;}
-
-.amenu {
-    text-decoration: none;
-    color: white;
-    display: inline-table;
-    padding-top: 15px; padding-bottom: 15px;
-    padding-left: 3px; padding-right: 3px;
-    margin-right: 2px; margin-bottom: 5px;
-    border: 1px solid red;
-}
+@media all and (display-mode: standalone),(prefers-color-scheme: dark), (prefers-color-scheme: no-preference) {
+.amenu {color:white; border-color: red;}
 .amenu:hover,.amenu:focus{color: cyan;}
 .amenu:active {color: cyan; border-color: cyan;}
+body {color: white; background-color: black;}
 a {color: cyan;}
-h1,h2,h3,h4 {padding-left: 10px;}
 
-header {padding: 1%; border: 2px solid cyan;}
-article {padding: 1%; border: 2px solid magenta;}
-section {padding: 1%; border: 2px solid yellow;}
-p:hover,li:hover,h1:hover,h2:hover {text-shadow: 2px 2px 2px yellow;}
+header {border-color: cyan;}
+article {border-color: magenta;}
+section {border-color: yellow;}
+p:hover,li:hover,h1:hover,h2:hover {color:yellow;}
+}
+
+@media all and (display-mode: standalone),(prefers-color-scheme: light) {
+.amenu {color:black; border-color: red;}
+.amenu:hover,.amenu:focus{color: cyan;}
+.amenu:active {color: cyan; border-color: cyan;}
+body {color: black; background-color: white;}
+a {color: green;}
+
+header {border-color: blue;}
+article {border-color: red;}
+section {border-color: green;}
+p:hover,li:hover,h1:hover,h2:hover {color:red;}
+}
+
+@media print, tv {
+body,.amenu,article,header,section{
+  color:black;background:white;border-style: none;}
+  a,h1,h2,h3,h4{color:blue;}
+}
+
+@media reader, speech, tty {
+.amenu {border: none}
+
+header {border: none;}
+section {border: none;}
+}
