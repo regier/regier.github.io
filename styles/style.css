@@ -1,4 +1,4 @@
-@media all and (display-mode: standalone),(prefers-color-scheme: light) {
+@media only screen and (prefers-color-scheme: light) {
 .amenu {color:black; border-color: red;}
 .amenu:hover,.amenu:focus{color: cyan;}
 .amenu:active {color: cyan; border-color: cyan;}
@@ -11,7 +11,7 @@ section {border-color: green;}
 p:hover,li:hover,h1:hover,h2:hover {color:red;}
 }
 
-@media all and (display-mode: standalone),(prefers-color-scheme: dark), (prefers-color-scheme: no-preference) {
+@media only screen and (prefers-color-scheme: dark) {
 .amenu {color:white; border-color: red;}
 .amenu:hover,.amenu:focus{color: cyan;}
 .amenu:active {color: cyan; border-color: cyan;}
@@ -24,13 +24,13 @@ section {border-color: yellow;}
 p:hover,li:hover,h1:hover,h2:hover {color:yellow;}
 }
 
-@media print, tv {
+@media only print, tv {
 body,.amenu,article,header,section{
   color:black;background:white;border-style: none;}
   a,h1,h2,h3,h4{color:blue;}
 }
 
-@media reader, speech, tty {
+@media only reader, speech, tty {
 .amenu {border: none}
 
 header {border: none;}
