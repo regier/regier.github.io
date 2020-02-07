@@ -42,18 +42,18 @@
 <section>
 <ul>
 <li>First we need to install some system stuff and dependencies</li>
-<code>dnsmasq-base ebtables dnsmasq-base iptables apparmor</code>
+<code>apt install dnsmasq-base ebtables dnsmasq-base iptables apparmor</code>
 <li>Now lets install some other utils that may help us with some configuration</li>
-<code>libvirt-clients libvirt-daemon-system lsb-base lsb-release debian-goodies curl</code>
+<code>apt install libvirt-clients libvirt-daemon-system lsb-base lsb-release debian-goodies curl</code>
 <li>And finally let's install LXC and the tools to create and manage our LXC containers.</li>
 <code>apt install lxc lxctl lxcfs lxc-templates debootstrap</code>
 <li>Now make your /etc/lxc/default.conf look like this</li>
-<pre><code>lxc.net.0.type = veth
+<pre><samp>lxc.net.0.type = veth
 lxc.net.0.link = lxcbr0
 lxc.net.0.flags = up
 lxc.apparmor.profile = generated
 lxc.apparmor.allow_nesting = 1
-</code></pre>
+</samp></pre>
 </ul>
 </section>
 </article> 
