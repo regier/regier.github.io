@@ -31,7 +31,7 @@ body,.amenu,article,header,section{
 }
 
 @media only reader, speech, tty {
-.amenu {border: none}
+.amenu {border: none;}
 
 header {border: none;}
 section {border: none;}
