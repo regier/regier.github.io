@@ -2,28 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
 <url>
   <loc>https://regierkunkel.com/</loc>
-  <lastmod>2020-02-06</lastmod>
+  <lastmod>2020-02-16</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://regierkunkel.com/index.html</loc>
-  <lastmod>2020-02-06</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://regierkunkel.com/projects.html</loc>
-  <lastmod>2020-02-02</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://regierkunkel.com/organizations.html</loc>
-  <lastmod>2020-02-04</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://regierkunkel.com/social.html</loc>
-  <lastmod>2020-02-02</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2020-02-16</lastmod>
+  <priority>0.90</priority>
 </url>
 <url>
   <loc>https://regierkunkel.com/resume.html</loc>
@@ -31,8 +16,18 @@
   <priority>0.80</priority>
 </url>
 <url>
+    <loc>https://regierkunkel.com/contact.html</loc>
+    <lasmod>2020-02-16</lastmod>
+    <priority>0.80</priority>
+</url>
+<url>
+    <loc>https://regierkunkel.com/links.html</loc>
+    <lasmod>2020-02-16</lastmod>
+    <priority>0.80</priority>
+</url>
+<url>
   <loc>https://regierkunkel.com/blog.html</loc>
-  <lastmod>2020-02-02</lastmod>
+  <lastmod>2020-02-16</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
@@ -41,3 +36,4 @@
   <priority>0.64</priority>
 </url>
 </urlset>
+

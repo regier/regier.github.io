@@ -1,11 +1,11 @@
 @media only screen and (prefers-color-scheme: light){
-.amenu{color:black;border-color:red;}.amenu:hover,.amenu:focus{color:green;}.amenu:active{color:green;border-color:green;}
+.amenu{color:black;border-color:red;}.amenu:hover,.amenu:focus{color:green;border-color:green}.amenu:active{color:blue;border-color:blue;}
 body{color:black;background-color:white;}a{color:green;}
 code{color:red;}samp{color:blue;}
 header{border-color:blue;}article{border-color:red;}section{border-color:green;}
 p:hover,li:hover,h1:hover,h2:hover {color:red;}}
 @media only screen and (prefers-color-scheme: dark){
-.amenu{color:white;border-color:red;}.amenu:hover,.amenu:focus{color:yellow;}.amenu:active{border-color:yellow;}
+.amenu{color:white;border-color:red;}.amenu:hover,.amenu:focus{color:yellow;border-color:yellow}.amenu:active{color:cyan;border-color:cyan;}
 body{color:white;background-color:black;}a{color:magenta;}
 code{color:magenta;}samp{color:cyan;}
 header{border-color:cyan;}article{border-color:magenta;}section{border-color:yellow;}

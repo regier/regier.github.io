@@ -3,24 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self'; img-src 'self' ; style-src 'self' 'unsafe-inline';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self'; img-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <style type="text/css">
-        nav{padding: 5px;}
-        .amenu {margin-bottom:5px; border: solid; display: inline-grid; padding: 15px; padding-left: 2px; padding-right: 2px; text-decoration: none;}
-        article {margin:1%; border: solid;} header {margin:1%; border: solid;} section {margin:1%; border: solid;}
-        body {max-width: 1024px; min-width: 256px; margin: auto; vertical-align:middle;}
-        code {font-family: monospace;padding: 1%}samp{font-family: monospace;padding: 1%}pre{font-family: monospace;padding: 1%}
-        p{margin-left: 1%;padding: 1%}h1{margin-left: 1%;padding: 1%}h2{margin-left: 1%;padding: 1%}h3{margin-left: 1%;padding: 1%}h4 {margin-left: 1%;padding: 1%}
-        @font-face {font-family: 'Open Sans';src: local('Open Sans Regular'), local('OpenSans-Regular'), url(OpenSans-Regular.ttf) format('truetype');}
-        * {font-family: 'Open Sans'; box-sizing: border-box;}
+    nav{padding: 5px;}.amenu{text-align:center;min-width:128px;min-height:48px;line-height:48px;margin-bottom:2%;border:solid;display:inline-grid;text-decoration:none;}
+    article,header,section{margin:1%;border:solid;}p,h1,h2,h3,h4{margin-left:1%;padding: 1%}* {font-family:'Open Sans';box-sizing:border-box;}
+    body{max-width:1024px;min-width:256px;margin:auto;vertical-align:middle;}code,samp,pre{font-family:monospace;padding:1%}
+    @font-face{font-family:'Open Sans';src:local('Open Sans Regular'),local('OpenSans-Regular'),url(OpenSans-Regular.ttf)format('truetype');font-display:swap;}
     </style>
-    <link rel="stylesheet" href="styles/style.css" media="all">
+    <link rel="stylesheet" href="theme.css" media="all">
     <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" href="assets/images/icons/icon-192x192.png">
-    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
+    <link rel="icon" type="image/png" href="favicon.png">
     <meta name="theme-color" content="#000000">
-    <meta name="description" content="Regier's WebSite. Just another techy guy.">
+    <meta name="description" content="Regier Kunkel Universal Web Site and Mobile Aapp (PWA)">
     <meta name="keywords" content="linux,technology,wideopendoor,regierkunkel,tutorials,articles,technews">
     <meta name="tags" content="linux,technology,wideopendoor,regierkunkel,tutorials,articles,technews">
     <meta name="author" content="Regier Kunkel" >
@@ -33,10 +29,10 @@
 <nav>
 <b>
 <a id="m0" class="amenu" href="index.html">Home</a>
-<a id="m1" class="amenu" href="projects.html">Projects</a>
-<a id="m2" class="amenu" href="organizations.html">Organizations</a>
-<a id="m3" class="amenu" href="social.html">Social</a>
-<a id="m4" class="amenu" href="resume.html">Resume</a>
+<a id="m1" class="amenu" href="links.html">Links</a>
+<a id="m2" class="amenu" href="contact.html">Contact</a>
+<a id="m3" class="amenu" href="resume.html">Resume</a>
+<a id="m4" class="amenu" href="blog.html">Blog</a>
 </b>
 </nav>
 
@@ -115,3 +111,4 @@ You can see if this worked by using the command <code>SHOW GRANTS FOR 'my_user'@
 
 </body>
 </html>
+
