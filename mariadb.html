@@ -3,109 +3,127 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self'; img-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta content="default-src 'self'; font-src 'self'; img-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'"
+          http-equiv="Content-Security-Policy">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <style type="text/css">
-    nav{padding: 5px;}.amenu{text-align:center;min-width:128px;min-height:48px;line-height:48px;margin-bottom:2%;border:solid;display:inline-grid;text-decoration:none;}
-    article,header,section{margin:1%;border:solid;}p,h1,h2,h3,h4{margin-left:1%;padding: 1%}* {font-family:'Open Sans';box-sizing:border-box;}
-    body{max-width:1024px;min-width:256px;margin:auto;vertical-align:middle;}code,samp,pre{font-family:monospace;padding:1%}
+    nav{margin:1%;min-width:270px;}.amenu{text-align:center;min-width:128px;min-height:48px;line-height:48px;margin-bottom:2%;border:solid;display:inline-grid;text-decoration:none;}
+    article,header,section{min-width:270px;margin:1%;border:solid;}p,h1,h2,h3,h4{margin-left:1%;padding: 1%}*{font-family:'Open Sans';box-sizing:border-box;}
+    body{max-width:1024px;min-width:270px;margin:auto;vertical-align:middle;}code,samp,pre{font-family:monospace;padding:1%}.h1-title{margin-left:0px;margin-bottom:0px;}#title{display:inline-grid;text-align:center;text-decoration:none;border:solid;line-height:48px;width:262px;}
     @font-face{font-family:'Open Sans';src:local('Open Sans Regular'),local('OpenSans-Regular'),url(OpenSans-Regular.ttf)format('truetype');font-display:swap;}
+
+
     </style>
-    <link rel="stylesheet" href="theme.css" media="all">
-    <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <meta name="theme-color" content="#000000">
-    <meta name="description" content="Regier Kunkel Universal Web Site and Mobile Aapp (PWA)">
-    <meta name="keywords" content="linux,technology,wideopendoor,regierkunkel,tutorials,articles,technews">
-    <meta name="tags" content="linux,technology,wideopendoor,regierkunkel,tutorials,articles,technews">
-    <meta name="author" content="Regier Kunkel" >
-    <meta name="wot-verification" content="fe28d8c1c9ffabc91025"/>
+    <link href="theme.css" id="common-css" media="all" rel="stylesheet" type="text/css">
+    <link href="manifest.json" rel="manifest">
+    <link href="icons/icon-192x192.png" rel="apple-touch-icon">
+    <link href="favicon.png" rel="icon" type="image/png">
+    <meta content="#000000" name="theme-color">
+    <meta content="Regier Kunkel Universal Web Site and Mobile Aapp (PWA)" name="description">
+    <meta content="linux,technology,wideopendoor,regierkunkel,tutorials,articles,technews" name="keywords">
+    <meta content="linux,technology,wideopendoor,regierkunkel,tutorials,articles,technews" name="tags">
+    <meta content="Regier Kunkel" name="author">
+    <meta content="fe28d8c1c9ffabc91025" name="wot-verification"/>
     <title>MariaDB - Regier Kunkel</title>
 </head>
+
+<h1 class="h1-title"><a href="index.html" id="title" title="Go to the home page of regierkunkel.com">Regier Kunkel</a>
+</h1>
 
 <body>
 
 <nav>
-<b>
-<a id="m0" class="amenu" href="index.html">Home</a>
-<a id="m1" class="amenu" href="links.html">Links</a>
-<a id="m2" class="amenu" href="contact.html">Contact</a>
-<a id="m3" class="amenu" href="resume.html">Resume</a>
-<a id="m4" class="amenu" href="blog.html">Blog</a>
-</b>
+    <b>
+        <a class="amenu" href="index.html" id="m0">Home</a>
+        <a class="amenu" href="links.html" id="m1">Links</a>
+        <a class="amenu" href="contact.html" id="m2">Contact</a>
+        <a class="amenu" href="resume.html" id="m3">Resume</a>
+        <a class="amenu" href="blog.html" id="m4">Blog</a>
+    </b>
 </nav>
 
 <article>
 
-<header>
-<h1>Creating a DATABASE and USER for MariaDB</h1>
-<p>This is a quick and simple tutorial on how to create a database in MariaDB and as well creating and adding a user to use that DB.<br>
-Moreover we are going to see how to allow said user to connect from any server in the local network.<br>
-All text <code>like this</code> are the commands we are going to use.<br>
-Things <samp>written like this</samp> is what you should expect from your command or see in the terminal.</p>
-<p>I am assuming you have a fresh MariaDB install. For example what you get after running <strong>apt install mariadb-server</strong> on Debian based systems.</p>
-</header>
+    <header>
+        <h1>Creating a DATABASE and USER for MariaDB</h1>
+        <p>This is a quick and simple tutorial on how to create a database in MariaDB and as well creating and adding a
+            user to use that DB.<br>
+            Moreover we are going to see how to allow said user to connect from any server in the local network.<br>
+            All text <code>like this</code> are the commands we are going to use.<br>
+            Things <samp>written like this</samp> is what you should expect from your command or see in the terminal.
+        </p>
+        <p>I am assuming you have a fresh MariaDB install. For example what you get after running <strong>apt install
+            mariadb-server</strong> on Debian based systems.</p>
+    </header>
 
-<section>
-<h3>Creating a database in MariaDB</h3>
-<p>First run <code>mysql</code> as root from the server terminal to interact with MariaDB.<br>
-You should now see something like this.</p>
-<samp>root@Think-T420:~# mysql<br>
-Welcome to the MariaDB monitor.  Commands end with ; or \g.<br>
-Your MariaDB connection id is 49<br>
-Server version: 10.3.18-MariaDB-0+deb10u1 Debian 10<br>
-<br>
-Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.<br>
-<br>
-Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.<br>
-<br>
-MariaDB [(none)]></samp>
-<p>We are no going to create a database called <strong>this_database</strong> with the command <code>CREATE DATABASE `this_database`;</code><br>
-Please notice the quote style <strong>" ` "</strong> and the <strong>" ; "</strong> at the end.<br>
-You should see something like this.</p>
-<samp>MariaDB [(none)]> CREATE DATABASE `this_database`;<br>
-Query OK, 1 row affected (0.001 sec)</samp>
-</section>
+    <section>
+        <h3>Creating a database in MariaDB</h3>
+        <p>First run <code>mysql</code> as root from the server terminal to interact with MariaDB.<br>
+            You should now see something like this.</p>
+        <samp>root@Think-T420:~# mysql<br>
+            Welcome to the MariaDB monitor. Commands end with ; or \g.<br>
+            Your MariaDB connection id is 49<br>
+            Server version: 10.3.18-MariaDB-0+deb10u1 Debian 10<br>
+            <br>
+            Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.<br>
+            <br>
+            Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.<br>
+            <br>
+            MariaDB [(none)]></samp>
+        <p>We are no going to create a database called <strong>this_database</strong> with the command <code>CREATE
+            DATABASE `this_database`;</code><br>
+            Please notice the quote style <strong>" ` "</strong> and the <strong>" ; "</strong> at the end.<br>
+            You should see something like this.</p>
+        <samp>MariaDB [(none)]> CREATE DATABASE `this_database`;<br>
+            Query OK, 1 row affected (0.001 sec)</samp>
+    </section>
 
-<section>
-<h4>Creating a User in MariaDB</h4>
-<p>Ok, you have a database, now <strong>let's create a user</strong> so you or your application can actually make use of it<br>
-We are going to create a user called <strong>my_self</strong> and it's password is going to be <strong>my_password</strong>, of course you can change the password, user name and database name to anything you like.<br>
-The MySQL command for this is <code>CREATE USER 'my_user' IDENTIFIED BY 'my_password';</code>.<br>
-You should see an output like this.</p>
-<samp>MariaDB [(none)]> CREATE USER 'my user' IDENTIFIED BY 'my_password';<br>
-Query OK, 0 rows affected (0.001 sec)</samp>
-</section>
+    <section>
+        <h4>Creating a User in MariaDB</h4>
+        <p>Ok, you have a database, now <strong>let's create a user</strong> so you or your application can actually
+            make use of it<br>
+            We are going to create a user called <strong>my_self</strong> and it's password is going to be <strong>my_password</strong>,
+            of course you can change the password, user name and database name to anything you like.<br>
+            The MySQL command for this is <code>CREATE USER 'my_user' IDENTIFIED BY 'my_password';</code>.<br>
+            You should see an output like this.</p>
+        <samp>MariaDB [(none)]> CREATE USER 'my user' IDENTIFIED BY 'my_password';<br>
+            Query OK, 0 rows affected (0.001 sec)</samp>
+    </section>
 
-<section>
-<h4>Granting Privileges to User in a Database in MariaDB</h4>
-<p>Fantastic! Now we have a database called <strong>this_database</strong> and a user named <strong>my_user</strong> authenticated with the password <strong>my_password</strong>.<br>
-<strong>However!</strong> Just because both exist <strong>it doesn't mean the user can use the database!</strong><br>
-Now we are going to <strong>allow my_user to access the database this_database from localhost</strong>, that is, the same server, the same place MariaDB is running from.
-Let's use the command <code>GRANT USAGE ON *.* TO 'my_user'@localhost IDENTIFIED BY 'my_password';</code>
-The output should be something like this.</p>
-<samp>MariaDB [(none)]> GRANT USAGE ON *.* TO 'my_user'@localhost IDENTIFIED BY 'my_password';<br>
-Query OK, 0 rows affected (0.000 sec)</samp>
-<p>Now, if you want to <strong>allow user to connect from any other server on the network</strong>, just <strong>replace localhost with '%'</strong>.<br>
-The command and output will be. <code>GRANT USAGE ON *.* TO 'my_user'@'%' IDENTIFIED BY 'my_password';</code></p>
-<samp>MariaDB [(none)]> GRANT USAGE ON *.* TO 'my_user'@'%' IDENTIFIED BY 'my_password';<br>
-Query OK, 0 rows affected (0.001 sec)</samp>
-<p>And finally lets give all privileges to my_user so it can modify this_database. As before <strong>" '@' " for network access</strong> and <strong>" localhost " for server access</strong>.<br>
-<code>GRANT ALL privileges ON `my_database`.* TO 'my_user'@'%' IDENTIFIED BY 'my_password';</code></p>
-<samp>GRANT ALL privileges ON `my_database`.* TO 'my_user'@'%' IDENTIFIED BY 'my_password';<br>
-Query OK, 0 rows affected (0.001 sec)</samp>
-<p>Lets finish up with a <code>FLUSH PRIVILEGES;</code>.<br>
-You can see if this worked by using the command <code>SHOW GRANTS FOR 'my_user'@localhost;</code><br>
-<samp>SHOW GRANTS FOR 'my_user'@localhost;<br>
-+--------------------------------------------------------------------+<br>
-| Grants for my_user@localhost                                       |<br>
-+--------------------------------------------------------------------+<br>
-| GRANT USAGE ON *.* TO 'my_user'@'localhost'                        |<br>
-| GRANT ALL PRIVILEGES ON `this_database`.* TO 'my_user'@'localhost' |<br>
-+--------------------------------------------------------------------+<br>
-2 rows in set (0,00 sec)</samp>
-</section>
+    <section>
+        <h4>Granting Privileges to User in a Database in MariaDB</h4>
+        <p>Fantastic! Now we have a database called <strong>this_database</strong> and a user named
+            <strong>my_user</strong> authenticated with the password <strong>my_password</strong>.<br>
+            <strong>However!</strong> Just because both exist <strong>it doesn't mean the user can use the
+                database!</strong><br>
+            Now we are going to <strong>allow my_user to access the database this_database from localhost</strong>, that
+            is, the same server, the same place MariaDB is running from.
+            Let's use the command <code>GRANT USAGE ON *.* TO 'my_user'@localhost IDENTIFIED BY 'my_password';</code>
+            The output should be something like this.</p>
+        <samp>MariaDB [(none)]> GRANT USAGE ON *.* TO 'my_user'@localhost IDENTIFIED BY 'my_password';<br>
+            Query OK, 0 rows affected (0.000 sec)</samp>
+        <p>Now, if you want to <strong>allow user to connect from any other server on the network</strong>, just
+            <strong>replace localhost with '%'</strong>.<br>
+            The command and output will be. <code>GRANT USAGE ON *.* TO 'my_user'@'%' IDENTIFIED BY
+                'my_password';</code></p>
+        <samp>MariaDB [(none)]> GRANT USAGE ON *.* TO 'my_user'@'%' IDENTIFIED BY 'my_password';<br>
+            Query OK, 0 rows affected (0.001 sec)</samp>
+        <p>And finally lets give all privileges to my_user so it can modify this_database. As before <strong>" '@' " for
+            network access</strong> and <strong>" localhost " for server access</strong>.<br>
+            <code>GRANT ALL privileges ON `my_database`.* TO 'my_user'@'%' IDENTIFIED BY 'my_password';</code></p>
+        <samp>GRANT ALL privileges ON `my_database`.* TO 'my_user'@'%' IDENTIFIED BY 'my_password';<br>
+            Query OK, 0 rows affected (0.001 sec)</samp>
+        <p>Lets finish up with a <code>FLUSH PRIVILEGES;</code>.<br>
+            You can see if this worked by using the command <code>SHOW GRANTS FOR 'my_user'@localhost;</code><br>
+            <samp>SHOW GRANTS FOR 'my_user'@localhost;<br>
+                +--------------------------------------------------------------------+<br>
+                | Grants for my_user@localhost |<br>
+                +--------------------------------------------------------------------+<br>
+                | GRANT USAGE ON *.* TO 'my_user'@'localhost' |<br>
+                | GRANT ALL PRIVILEGES ON `this_database`.* TO 'my_user'@'localhost' |<br>
+                +--------------------------------------------------------------------+<br>
+                2 rows in set (0,00 sec)</samp>
+    </section>
 
 </article>
 

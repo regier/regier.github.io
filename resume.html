@@ -3,99 +3,109 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self'; img-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta content="default-src 'self'; font-src 'self'; img-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'"
+          http-equiv="Content-Security-Policy">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <style type="text/css">
-    nav{padding: 5px;}.amenu{text-align:center;min-width:128px;min-height:48px;line-height:48px;margin-bottom:2%;border:solid;display:inline-grid;text-decoration:none;}
-    article,header,section{margin:1%;border:solid;}p,h1,h2,h3,h4{margin-left:1%;padding: 1%}* {font-family:'Open Sans';box-sizing:border-box;}
-    body{max-width:1024px;min-width:256px;margin:auto;vertical-align:middle;}code,samp,pre{font-family:monospace;padding:1%}
+    nav{margin:1%;min-width:270px;}.amenu{text-align:center;min-width:128px;min-height:48px;line-height:48px;margin-bottom:2%;border:solid;display:inline-grid;text-decoration:none;}
+    article,header,section{min-width:270px;margin:1%;border:solid;}p,h1,h2,h3,h4{margin-left:1%;padding: 1%}*{font-family:'Open Sans';box-sizing:border-box;}
+    body{max-width:1024px;min-width:270px;margin:auto;vertical-align:middle;}code,samp,pre{font-family:monospace;padding:1%}.h1-title{margin-left:0px;margin-bottom:0px;}#title{display:inline-grid;text-align:center;text-decoration:none;border:solid;line-height:48px;width:262px;}
     @font-face{font-family:'Open Sans';src:local('Open Sans Regular'),local('OpenSans-Regular'),url(OpenSans-Regular.ttf)format('truetype');font-display:swap;}
+
+
     </style>
-    <link rel="stylesheet" href="theme.css" media="all">
-    <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <meta name="theme-color" content="#000000">
-    <meta name="description" content="Regier Kunkel Universal Web Site and Mobile Aapp (PWA)">
-    <meta name="keywords" content="linux,technology,wideopendoor,regierkunkel,tutorials,articles,technews">
-    <meta name="tags" content="linux,technology,wideopendoor,regierkunkel,tutorials,articles,technews">
-    <meta name="author" content="Regier Kunkel" >
-    <meta name="wot-verification" content="fe28d8c1c9ffabc91025"/>
+    <link href="theme.css" id="common-css" media="all" rel="stylesheet" type="text/css">
+    <link href="manifest.json" rel="manifest">
+    <link href="icons/icon-192x192.png" rel="apple-touch-icon">
+    <link href="favicon.png" rel="icon" type="image/png">
+    <meta content="#000000" name="theme-color">
+    <meta content="Regier Kunkel Universal Web Site and Mobile Aapp (PWA)" name="description">
+    <meta content="linux,technology,wideopendoor,regierkunkel,tutorials,articles,technews" name="keywords">
+    <meta content="linux,technology,wideopendoor,regierkunkel,tutorials,articles,technews" name="tags">
+    <meta content="Regier Kunkel" name="author">
+    <meta content="fe28d8c1c9ffabc91025" name="wot-verification"/>
     <title>Resume - Regier Kunkel</title>
 </head>
+
+<h1 class="h1-title"><a href="index.html" id="title" title="Go to the home page of regierkunkel.com">Regier Kunkel</a>
+</h1>
 
 <body>
 
 <nav>
-<b>
-<a id="m0" class="amenu" href="index.html">Home</a>
-<a id="m1" class="amenu" href="links.html">Links</a>
-<a id="m2" class="amenu" href="contact.html">Contact</a>
-<a id="m3" class="amenu" href="resume.html">Resume</a>
-<a id="m4" class="amenu" href="blog.html">Blog</a>
-</b>
+    <b>
+        <a class="amenu" href="index.html" id="m0">Home</a>
+        <a class="amenu" href="links.html" id="m1">Links</a>
+        <a class="amenu" href="contact.html" id="m2">Contact</a>
+        <a class="amenu" href="resume.html" id="m3">Resume</a>
+        <a class="amenu" href="blog.html" id="m4">Blog</a>
+    </b>
 </nav>
 
 <article>
 
-<header>
-<h1>Resume</h1>
-<p>This is my drastically summarized Curriculum Vitae.<br>
-Due to the nature of the internet I will be omitting names of companies I worked for.</p>
-<p> I am always open to new opportunities and challenges!</p>
-</header>
+    <header>
+        <h1>Resume</h1>
+        <p>This is my drastically summarized Curriculum Vitae.<br>
+            Due to the nature of the internet I will be omitting names of companies I worked for.</p>
+        <p> I am always open to new opportunities and challenges!</p>
+    </header>
 
-<section>
-<h2>Profile</h2>
-<ul>
-<li>Second year student of Bachelor of Science in Information Technology.</li>
-<li>GNU/Linux and Windows Server Administrator. Passionate about technology, quality and efficiency.</li>
-<li>Seeking opportunities to continue building a strong and prosperous career and learning new skills.</li>
-</ul>
-</section>
-<section>
-    <h2>Skills</h2>
+    <section>
+        <h2>Profile</h2>
         <ul>
-	        <li>Team leadership, resources management with analytical thinking and ability to find a solution for problems.</li>
-	        <li>Linux, Windows and macOS administration.</li>
-	        <li>Several years of QA for several Open-Source projects, closing working with developers.</li>
-	        <li>Network infrastructure planning and deployment. Firewall, routing, load balancing and NAT.</li>
-	        <li>Cloud solutions, deployment and management.</li>
-	        <li>Shell scripting, packaging, automation, and basic level in Lua, C++ and JAVA.</li>
-	        <li>Photography, nature product and macro photography. Use of lights and shadows.</li>
+            <li>Second year student of Bachelor of Science in Information Technology.</li>
+            <li>GNU/Linux and Windows Server Administrator. Passionate about technology, quality and efficiency.</li>
+            <li>Seeking opportunities to continue building a strong and prosperous career and learning new skills.</li>
         </ul>
-</section>
-<section>
-   <h2>Languages</h2>
+    </section>
+    <section>
+        <h2>Skills</h2>
         <ul>
-	        <li>English: Fluent</li>
-	        <li>Portuguese: Native</li>
-	        <li>Spanish: Basic</li>
+            <li>Team leadership, resources management with analytical thinking and ability to find a solution for
+                problems.
+            </li>
+            <li>Linux, Windows and macOS administration.</li>
+            <li>Several years of QA for several Open-Source projects, closing working with developers.</li>
+            <li>Network infrastructure planning and deployment. Firewall, routing, load balancing and NAT.</li>
+            <li>Cloud solutions, deployment and management.</li>
+            <li>Shell scripting, packaging, automation, and basic level in Lua, C++ and JAVA.</li>
+            <li>Photography, nature product and macro photography. Use of lights and shadows.</li>
         </ul>
-</section>
-<section>
-    <h2>Memberships</h2>
+    </section>
+    <section>
+        <h2>Languages</h2>
         <ul>
-	        <li>Ireland
-		        <ul>
-			        <li>Irish Computer Society</li>
-			        <li>Irish Linux Users Group</li>
-		        </ul>
-	        </li>
-	        <li>Free Software
-		        <ul>
-			        <li>Linux Foundation</li>
-        		</ul>
-	        </li>
+            <li>English: Fluent</li>
+            <li>Portuguese: Native</li>
+            <li>Spanish: Basic</li>
         </ul>
-</section>
-<section>
-    <h2>Hobbies and Interests</h2>
-    	<ul>
-        <li>Running dedicated servers and VPS. Game servers, git servers and databases.</li>
-        <li>Computers, Electronics, Robotics, Photography, Cycling, Karate, Science, Aviation and Flight Simulation, Space Exploration.</li>
-		</ul>
-</section>
+    </section>
+    <section>
+        <h2>Memberships</h2>
+        <ul>
+            <li>Ireland
+                <ul>
+                    <li>Irish Computer Society</li>
+                    <li>Irish Linux Users Group</li>
+                </ul>
+            </li>
+            <li>Free Software
+                <ul>
+                    <li>Linux Foundation</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <section>
+        <h2>Hobbies and Interests</h2>
+        <ul>
+            <li>Running dedicated servers and VPS. Game servers, git servers and databases.</li>
+            <li>Computers, Electronics, Robotics, Photography, Cycling, Karate, Science, Aviation and Flight Simulation,
+                Space Exploration.
+            </li>
+        </ul>
+    </section>
 </article>
 
 </body>

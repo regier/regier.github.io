@@ -3,60 +3,66 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self'; img-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta content="default-src 'self'; font-src 'self'; img-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'"
+          http-equiv="Content-Security-Policy">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <style type="text/css">
-    nav{padding: 5px;}.amenu{text-align:center;min-width:128px;min-height:48px;line-height:48px;margin-bottom:2%;border:solid;display:inline-grid;text-decoration:none;}
-    article,header,section{margin:1%;border:solid;}p,h1,h2,h3,h4{margin-left:1%;padding: 1%}* {font-family:'Open Sans';box-sizing:border-box;}
-    body{max-width:1024px;min-width:256px;margin:auto;vertical-align:middle;}code,samp,pre{font-family:monospace;padding:1%}
+    nav{margin:1%;min-width:270px;}.amenu{text-align:center;min-width:128px;min-height:48px;line-height:48px;margin-bottom:2%;border:solid;display:inline-grid;text-decoration:none;}
+    article,header,section{min-width:270px;margin:1%;border:solid;}p,h1,h2,h3,h4{margin-left:1%;padding: 1%}*{font-family:'Open Sans';box-sizing:border-box;}
+    body{max-width:1024px;min-width:270px;margin:auto;vertical-align:middle;}code,samp,pre{font-family:monospace;padding:1%}.h1-title{margin-left:0px;margin-bottom:0px;}#title{display:inline-grid;text-align:center;text-decoration:none;border:solid;line-height:48px;width:262px;}
     @font-face{font-family:'Open Sans';src:local('Open Sans Regular'),local('OpenSans-Regular'),url(OpenSans-Regular.ttf)format('truetype');font-display:swap;}
+
+
     </style>
-    <link rel="stylesheet" href="theme.css" media="all">
-    <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <meta name="theme-color" content="#000000">
-    <meta name="description" content="Regier Kunkel Universal Web Site and Mobile Aapp (PWA)">
-    <meta name="keywords" content="linux,technology,wideopendoor,regierkunkel,tutorials,articles,technews">
-    <meta name="tags" content="linux,technology,wideopendoor,regierkunkel,tutorials,articles,technews">
-    <meta name="author" content="Regier Kunkel" >
-    <meta name="wot-verification" content="fe28d8c1c9ffabc91025"/>
+    <link href="theme.css" id="common-css" media="all" rel="stylesheet" type="text/css">
+    <link href="manifest.json" rel="manifest">
+    <link href="icons/icon-192x192.png" rel="apple-touch-icon">
+    <link href="favicon.png" rel="icon" type="image/png">
+    <meta content="#000000" name="theme-color">
+    <meta content="Regier Kunkel Universal Web Site and Mobile Aapp (PWA)" name="description">
+    <meta content="linux,technology,wideopendoor,regierkunkel,tutorials,articles,technews" name="keywords">
+    <meta content="linux,technology,wideopendoor,regierkunkel,tutorials,articles,technews" name="tags">
+    <meta content="Regier Kunkel" name="author">
+    <meta content="fe28d8c1c9ffabc91025" name="wot-verification"/>
     <title>LXC - Regier Kunkel</title>
 </head>
- 
+
+<h1 class="h1-title"><a href="index.html" id="title" title="Go to the home page of regierkunkel.com">Regier Kunkel</a>
+</h1>
+
 <body>
- 
+
 <nav>
-<b>
-<a id="m0" class="amenu" href="index.html">Home</a>
-<a id="m1" class="amenu" href="links.html">Links</a>
-<a id="m2" class="amenu" href="contact.html">Contact</a>
-<a id="m3" class="amenu" href="resume.html">Resume</a>
-<a id="m4" class="amenu" href="blog.html">Blog</a>
-</b>
+    <b>
+        <a class="amenu" href="index.html" id="m0">Home</a>
+        <a class="amenu" href="links.html" id="m1">Links</a>
+        <a class="amenu" href="contact.html" id="m2">Contact</a>
+        <a class="amenu" href="resume.html" id="m3">Resume</a>
+        <a class="amenu" href="blog.html" id="m4">Blog</a>
+    </b>
 </nav>
 <article>
-<header>
+    <header>
 
-</header>
-<section>
-<ul>
-<li>First we need to install some system stuff and dependencies</li>
-<code>apt install dnsmasq-base ebtables dnsmasq-base iptables apparmor</code>
-<li>Now lets install some other utils that may help us with some configuration</li>
-<code>apt install libvirt-clients libvirt-daemon-system lsb-base lsb-release debian-goodies curl</code>
-<li>And finally let's install LXC and the tools to create and manage our LXC containers.</li>
-<code>apt install lxc lxctl lxcfs lxc-templates debootstrap</code>
-<li>Now make your /etc/lxc/default.conf look like this</li>
-<pre><samp>lxc.net.0.type = veth
+    </header>
+    <section>
+        <ul>
+            <li>First we need to install some system stuff and dependencies</li>
+            <code>apt install dnsmasq-base ebtables dnsmasq-base iptables apparmor</code>
+            <li>Now lets install some other utils that may help us with some configuration</li>
+            <code>apt install libvirt-clients libvirt-daemon-system lsb-base lsb-release debian-goodies curl</code>
+            <li>And finally let's install LXC and the tools to create and manage our LXC containers.</li>
+            <code>apt install lxc lxctl lxcfs lxc-templates debootstrap</code>
+            <li>Now make your /etc/lxc/default.conf look like this</li>
+            <pre><samp>lxc.net.0.type = veth
 lxc.net.0.link = lxcbr0
 lxc.net.0.flags = up
 lxc.apparmor.profile = generated
 lxc.apparmor.allow_nesting = 1
 </samp></pre>
-</ul>
-</section>
-</article> 
- </body>
- </html>
+        </ul>
+    </section>
+</article>
+</body>
+</html>
 

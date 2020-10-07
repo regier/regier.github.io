@@ -1,0 +1,39 @@
+*{border-radius:10px;}
+
+@media screen and (prefers-color-scheme: light){
+#m0{color:#F44336;}
+#m1{color:#FFC107;}
+#m2{color:#8BC34A;}
+#m3{color:#2196F3;}
+#m4{color:#FF9800;}
+#title{color:#3F51B5;}
+article{color:#9C27B0;}
+header{color:#009688;}
+section{color:#FF9800;}
+}
+
+
+@media screen and (prefers-color-scheme: dark){
+*{background-color:black;}
+#m0{color:#F44336;}
+#m1{color:#FFC107;}
+#m2{color:#8BC34A;}
+#m3{color:#2196F3;}
+#m4{color:#FF9800;}
+#title{color:#2196F3;}
+article{color:#9C27B0;}
+header{color:#FFC107;}
+section{color:#CDDC39;}
+}
+
+@media print{
+*{background-color:white;}
+#m0,#m1,#m2,#m3,#m4,#title{border-radius:0px;border-style:none none solid none;}
+article,header,section{border-radius:0px;border-style:none none none solid;}
+h1,h2,h3,h4,a,ul,li,pre,code{color:blue;}
+}
+
+@media only reader,speech,tty{
+*{color:black;background:none;background-color:white;}
+#m0,#m1,#m2,#m3,#m4,.amenu,#title,header,section {border: none;}
+}
